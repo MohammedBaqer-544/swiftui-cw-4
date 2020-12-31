@@ -2,6 +2,32 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>AndikaNewBasic-BoldItalic.ttf</string>
+		<string>Montserrat-LightItalic.ttf</string>
+		<string>Vibes-Regular.ttf</string>
+		<string>Montserrat-Medium.ttf</string>
+		<string>AndikaNewBasic-Bold.ttf</string>
+		<string>(A) Arslan Wessam A (A) Arslan Wessam A.ttf</string>
+		<string>Montserrat-BoldItalic.ttf</string>
+		<string>ArefRuqaa-Regular.ttf</string>
+		<string>Montserrat-Light.ttf</string>
+		<string>Montserrat-ThinItalic.ttf</string>
+		<string>Montserrat-Thin.ttf</string>
+		<string>Montserrat-Bold.ttf</string>
+		<string>Montserrat-MediumItalic.ttf</string>
+		<string>Montserrat-BlackItalic.ttf</string>
+		<string>AndikaNewBasic-Regular.ttf</string>
+		<string>ArefRuqaa-Bold.ttf</string>
+		<string>Montserrat-SemiBold.ttf</string>
+		<string>ReemKufi-Regular.ttf</string>
+		<string>Montserrat-Black.ttf</string>
+		<string>Montserrat-Regular.ttf</string>
+		<string>Montserrat-Italic.ttf</string>
+		<string>Montserrat-SemiBoldItalic.ttf</string>
+		<string>Montserrat-ExtraBoldItalic.ttf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

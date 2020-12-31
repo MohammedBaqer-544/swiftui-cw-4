@@ -10,45 +10,134 @@ import SwiftUI
 struct Calculator: View {
     // MARK: - Add states here
     
+    @State var number = ""
+
     var body: some View {
         ZStack{
-            Color.black.edgesIgnoringSafeArea(.all)
+            Color.black
+                .edgesIgnoringSafeArea(.all)
+            
             VStack(spacing:10){
                 Spacer()
+                
                 HStack{
                     Spacer()
-                    Text("0")
+                    
+                    Text(number)
                         .modifier(TitleModifier())
                         .animation(.easeIn(duration: 0.1))
+                        .contextMenu {
+                            Button(action: {
+                                UIPasteboard.general.string = number
+                            }) {
+                                Text("Copy")
+                                }
+                            }
                 }
+                
                 HStack{
                     Text("C").modifier(ButtonModifier(type: .gray))
+                        .onTapGesture {
+                            number = ""
+                        }
+                    
                     Text("±").modifier(ButtonModifier(type: .gray))
+                        .onTapGesture {
+                            number += "±"
+                        }
+
                     Text("%").modifier(ButtonModifier(type: .gray))
+                        .onTapGesture {
+                            number += "%"
+                        }
+                    
                     Text("÷").modifier(ButtonModifier(type: .orange))
+                        .onTapGesture {
+                            number += "÷"
+                        }
                 }
+                
                 HStack{
                     Text("7").modifier(ButtonModifier(type: .gray))
+                        .onTapGesture {
+                            number += "7"
+                        }
+                    
                     Text("8").modifier(ButtonModifier(type: .gray))
+                        .onTapGesture {
+                            number += "8"
+                        }
+                    
                     Text("9").modifier(ButtonModifier(type: .gray))
+                        .onTapGesture {
+                            number += "9"
+                        }
+                    
                     Text("×").modifier(ButtonModifier(type: .orange))
+                        .onTapGesture {
+                            number += "×"
+                        }
                 }
+                
                 HStack{
                     Text("4").modifier(ButtonModifier(type: .gray))
+                        .onTapGesture {
+                            number += "4"
+                        }
+                    
                     Text("5").modifier(ButtonModifier(type: .gray))
+                        .onTapGesture {
+                            number += "5"
+                        }
+                    
                     Text("6").modifier(ButtonModifier(type: .gray))
+                        .onTapGesture {
+                            number += "6"
+                        }
+                    
                     Text("-").modifier(ButtonModifier(type: .orange))
+                        .onTapGesture {
+                            number += "-"
+                        }
                 }
+                
                 HStack{
                     Text("1").modifier(ButtonModifier(type: .gray))
+                        .onTapGesture {
+                            number += "1"
+                        }
+                    
                     Text("2").modifier(ButtonModifier(type: .gray))
+                        .onTapGesture {
+                            number += "2"
+                        }
+                    
                     Text("3").modifier(ButtonModifier(type: .gray))
+                        .onTapGesture {
+                            number += "3"
+                        }
+                    
                     Text("+").modifier(ButtonModifier(type: .orange))
+                        .onTapGesture {
+                            number += "+"
+                        }
                 }
+                
                 HStack{
                     Text("0").modifier(Zero())
+                        .onTapGesture {
+                            number += "0"
+                        }
+                    
                     Text(".").modifier(ButtonModifier(type: .gray))
+                        .onTapGesture {
+                            number += "."
+                        }
+                    
                     Text("=").modifier(ButtonModifier(type: .orange))
+                        .onTapGesture {
+                            number += "="
+                        }
                 }
             }
             .padding()
